@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Week 3: API's</title>
+
+    <link rel="stylesheet" href="../css/reveal.css" />
+    <link rel="stylesheet" href="../css/theme/fac.css" />
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="../lib/css/zenburn.css" />
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? "../css/print/pdf.css"
+        : "../css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+
+    <style>
+      /* BLACK: #121212 */
+      /* YELLOW: #ffe500 */
+      /* BLUE: #0805ec */
+      /* GREEN: #00be00 */
+      /* RED: #ff2800 */
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-background-color="#121212">
+          <img src="../assets/logos/logo-mobile.png" class="img-s" />
+          <h1>Week 3: APIs</h1>
+          <p></p>
+        </section>
+
+        <section>
+          <section>
+            <h1>
+              <span class="bigunderline">
+                Mentors
+              </span>
+            </h1>
+          </section>
+
+          <section>
+            <h2>
+              <span class="bigunderline">
+                <h3>Georgia Shaw</h3>
+              </span>
+              <span>
+                <img class="img-m" src="../assets/portraits/36238916.png" />
+              </span>
+              <h4>Github: georgiamshaw</h4>
+              <span> </span>
+            </h2>
+          </section>
+
+          <!-- data-background="../assets/ui/stripey_small.svg"
+          data-background-repeat="repeat"
+          data-background-size="100px" -->
+
+          <section>
+            <h2>
+              <span class="bigunderline">
+                <h3>Tony Lomax</h3>
+              </span>
+              <span>
+                <img
+                  class="img-m"
+                  src="../assets/portraits/IMG_4448 edited.jpeg"
+                />
+              </span>
+              <h4>Github: tonylomax</h4>
+              <span> </span>
+            </h2>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>
+              <span class="bigunderline">
+                Plan
+              </span>
+            </h1>
+            <ul>
+              <li>
+                API basics, HTTP, XMLHttp requests, request-response pattern
+              </li>
+              <li>XHR (XMLHttprequest) and tools</li>
+              <li>
+                API requests in the browser, callbacks, working with JSON,
+                chaining API requests
+              </li>
+              <li>Flexbox</li>
+              <li>Software architecture/design</li>
+              <li>No research!</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>
+              <span class="bigunderline">
+                Why are we learning this?
+              </span>
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  Pretty much all the data used by most applications is sent via
+                  API's.
+                </p>
+              </li>
+              <li>
+                <p class="fragment">
+                  CityMapper uses the TFL API, Timeout uses the CityMapper API
+                  etc...
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span class="fragment"
+                    >Huge amounts of data can be accessed easily, you only
+                    request data when you need it and it usually comes in a
+                    familiar format - as a Javascript object.</span
+                  >
+                </p>
+              </li>
+            </ul>
+          </section>
+
+          <section data-markdown>
+            <p>https://api.giphy.com/v1/gifs/random</p>
+            ```Javascript
+            <p>
+              { "data": { "type": "gif", "id": "skUEiNTPnvuKc", "url":
+              "https://giphy.com/gifs/skUEiNTPnvuKc", "slug": "skUEiNTPnvuKc",
+              "bitly_gif_url": "https://gph.is/1Wy0uuI", "bitly_url":
+              "https://gph.is/1Wy0uuI", "embed_url":
+              "https://giphy.com/embed/skUEiNTPnvuKc", "username": "", "source":
+              "https://michaelshannon.tumblr.com/post/120707242089/leonorwatling-marion-cotillard-as-lady-macbeth",
+              "title": "Animated GIF", "source_tld":
+              "michaelshannon.tumblr.com", "source_post_url":
+              "https://michaelshannon.tumblr.com/post/120707242089/leonorwatling-marion-cotillard-as-lady-macbeth",
+              "is_sticker": 0, "import_datetime": "2016-04-30 20:59:10",
+              "trending_datetime": "0000-00-00 00:00:00", "images": {
+              "downsized_large": { "height": "197", "size": "516132", "url":
+              "https://media3.giphy.com/media/skUEiNTPnvuKc/giphy.gif?cid=1b50bc9a6749bde519a29cf2dde7731f2e0156de1ff61fbb&rid=giphy.gif",
+              "width": "480" } } >
+            </p>
+            ```
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>
+              <span class="bigunderline">
+                Top Tips
+              </span>
+            </h1>
+            <ul>
+              <li>
+                Read the Docs carfully. Make sure the API hasn't been
+                deprecated...
+              </li>
+              <li>
+                Use tools like Postman to test your API's
+              </li>
+              <li>
+                Don't worry about remembering the acronyms
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>
+              <span class="bigunderline">
+                Projects
+              </span>
+            </h1>
+            <h2>
+              A page that uses 2 API's and updates the DOM. Whatever you want!
+            </h2>
+          </section>
+          <section>
+            <h1>Fac 17 Week 3 Projects</h1>
+            <h2>
+              <a href="https://fac-17.github.io/W3-Partyps/" target="_blank">
+                Partyps</a
+              >
+            </h2>
+            <h2>
+              <a href="https://fac-17.github.io/week-3-MEIA/" target="_blank"
+                >Trainspiration</a
+              >
+            </h2>
+            <h2>
+              <a href="https://fac-17.github.io/Week3-BFNJ/" target="_blank">
+                Trump or Kanye</a
+              >
+            </h2>
+            <h2>
+              <a href="https://fac-17.github.io/CGKO-Week3/" target="_blank">
+                Crime Checker</a
+              >
+            </h2>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>
+              <span class="bigunderline">
+                First Workshop
+              </span>
+            </h1>
+            <h2>
+              github.com/foundersandcoders/api-workshop
+            </h2>
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="../lib/js/head.min.js"></script>
+    <script src="../js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: "slide", // none/fade/slide/convex/concave/zoom
+
+        dependencies: [
+          { src: "../plugin/markdown/marked.js" },
+          { src: "../plugin/markdown/markdown.js" },
+          { src: "../plugin/notes/notes.js", async: true },
+          {
+            src: "../plugin/highlight/highlight.js",
+            async: true,
+            callback: function() {
+              hljs.initHighlightingOnLoad();
+            }
+          }
+        ]
+      });
+    </script>
+  </body>
+</html>
